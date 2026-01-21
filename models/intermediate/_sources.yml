@@ -7,3 +7,9 @@ sources:
     tables:
       - name: forms
         description: "Form definitions with nested structure_override JSON containing all field configurations"
+
+      - name: form_records
+        description: "Form submissions with dynamic data JSON, fulcrum sync info, and project references"
+
+      - name: projects
+        description: "Project definitions with config, phases, finance, timeline, and other nested JSON structures"

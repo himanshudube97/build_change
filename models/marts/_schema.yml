@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: mart_branch_location_responses
+    description: "Summary of form responses aggregated by branch location. One row per branch."
+    columns:
+      - name: branch_location
+        description: "The branch location name/code"
+      - name: total_responses
+        description: "Total count of form responses from this branch"
+      - name: submitted_responses
+        description: "Count of submitted responses"
+      - name: draft_responses
+        description: "Count of draft responses"
+      - name: distinct_forms
+        description: "Number of different forms used at this branch"
+      - name: distinct_projects
+        description: "Number of different projects at this branch"
+      - name: first_response_at
+        description: "Timestamp of first response from this branch"
+      - name: last_response_at
+        description: "Timestamp of most recent response from this branch"
+
+  - name: mart_records_by_branch
+    description: "Detail table of all form records with their branch location. Use for filtering in BI tools."
+    columns:
+      - name: record_id
+        description: "Unique identifier for the form record"
+      - name: branch_location
+        description: "The branch location for this record (filter dimension)"
+      - name: record_state
+        description: "Current state of the record (submitted, draft, etc.)"
+      - name: form_id
+        description: "The form this record belongs to"
+      - name: created_at
+        description: "When the record was created"
