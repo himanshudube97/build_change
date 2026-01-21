@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    schema: staging
+    description: "Raw data from Airbyte syncs"
+    tables:
+      - name: forms
+        description: "Form definitions with nested structure_override JSON containing all field configurations"

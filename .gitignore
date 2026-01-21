@@ -13,3 +13,5 @@ package-lock.yml
 .env.local
 elementary_profiles/
 *.html
+profiles.yml
+*env
