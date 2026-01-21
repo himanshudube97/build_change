@@ -34,3 +34,43 @@ models:
         description: "The form this record belongs to"
       - name: created_at
         description: "When the record was created"
+
+  - name: mart_data_pipeline_status
+    description: "Data movement/pipeline status - records at each stage (registered, enrolled, passed, etc.)"
+    columns:
+      - name: pipeline_status
+        description: "The fulcrum status representing pipeline stage"
+      - name: total_records
+        description: "Count of records at this stage"
+      - name: status_order
+        description: "Order for funnel visualization"
+
+  - name: mart_assessment_by_location
+    description: "Assessments broken down by country and gender"
+    columns:
+      - name: country
+        description: "Country name"
+      - name: gender
+        description: "Gender value"
+      - name: total_assessments
+        description: "Total count of assessments"
+
+  - name: mart_engineering_breakdown
+    description: "Engineering types distribution - construction system, masonry, materials"
+    columns:
+      - name: engineering_type
+        description: "Category: Construction System, Masonry Type, or Building Materials"
+      - name: engineering_value
+        description: "The specific value/choice"
+      - name: record_count
+        description: "Number of records with this value"
+
+  - name: mart_training_summary
+    description: "Training participation by type and subtype"
+    columns:
+      - name: training_type
+        description: "Type of training (Homeowner, etc.)"
+      - name: training_subtype
+        description: "Sub-type (Theoretical, On-the-job)"
+      - name: total_participants
+        description: "Count of participants"
